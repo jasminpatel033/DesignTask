@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/design2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -72,6 +73,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
             SizedBox(height: 16),
+            GestureDetector(
+                    onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => Design2()),
+                  );  
+                  },
+                
+                    child:  
             Container(
                     width: 60,
                     height: 60,
@@ -81,11 +89,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: TextStyle(color: Colors.white),
                                   ),
                                 ),
+                                )
                               ],
                             ),
                           ),
                         ),
-
+                  
                 // <--Part-2-->    
                       
             Expanded(
